@@ -20,10 +20,13 @@ const Home = () => {
         1
       ).getTime();
 
-      const lastDay = new Date(
+      const lastDay = new Date( // Date 객체는 시, 분, 초까지 영향을 미친다
         curDate.getFullYear(),
         curDate.getMonth() + 1,
-        0
+        0,
+        23,
+        59,
+        59
       ).getTime();
 
       setData(
@@ -33,7 +36,7 @@ const Home = () => {
   }, [diaryList, curDate]);
 
   useEffect(() => {
-    console.log(data);
+    // console.log(data);
   }, [data]);
 
   const increaseMonth = () => {
