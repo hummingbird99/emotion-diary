@@ -48,14 +48,11 @@ function App() {
       const diaryList = JSON.parse(localData).sort(
         (a, b) => parseInt(b.id) - parseInt(a.id)
       );
-      dataId.current = JSON.parse(diaryList[0].id) + 1;
-
-      console.log(diaryList);
-      console.log(dataId);
+      dataId.current = parseInt(diaryList[0].id) + 1;
 
       dispatch({ type: "INIT", data: diaryList });
     }
-  });
+  }, []);
 
   const dataId = useRef(0);
   // CREATE
