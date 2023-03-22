@@ -1,7 +1,0 @@
-{
-  "hosting": {
-    "site": "hummingbird-react-project",
-    "public": "build",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-  }
-}
